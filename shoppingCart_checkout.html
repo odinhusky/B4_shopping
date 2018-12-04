@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>六角血拼網</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <!-- headers -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="shoppingCart.html">
+            <i class="fa fa-heart text-info" aria-hidden="true"></i>
+            六角血拼賣賣
+        </a>
+        <!-- 購物車內的數量 (Button 內包含 icon, 數量 badge) -->
+        <div class="dropdown ml-auto">
+            <button class="btn btn-sm btn-cart" data-toggle="dropdown" data-flip="false">
+                <i class="fa fa-shopping-cart text-dark fa-2x" aria-hidden="true"></i>
+                <span class="badge badge-pill badge-danger">12</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" style="min-width:300px;">
+                <div class="px-4 py-3">
+                    <h6>已選擇商品</h6>
+                    <table class="table table-sm">
+                        <tbody>
+                            <tr>
+                                <td class="align-middle text-center">
+                                    <a href="#removeModal" class="text-muted" data-toggle="modal" data-title="刪除 金牌西裝 1 件" data-backdrop="static" data-keyboard="false">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="align-middle">金牌西裝</td>
+                                <td class="align-middle">1 件</td>
+                                <td class="align-middle text-center">$520</td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle text-center">
+                                    <a href="#removeModal" class="text-muted" data-toggle="modal" data-title="刪除 金牌女裝 1 件" data-backdrop="static" data-keyboard="false">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="align-middle">金牌女裝</td>
+                                <td class="align-middle">1 件</td>
+                                <td class="align-middle text-center">$480</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="shoppingCart_checkout.html" class="btn btn-primary btn-block">
+                        <i class="" aria-hidden="true"></i> 結帳去
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container main-contant py-5">
+        <h1 class="text-center mb-3 text-secondary">六角血拼 結帳</h1>
+        <div class="form-row">
+            <div class="col-12 col-sm">
+                <div class="alert alert-primary alert-rounded" role="alert">
+                    1.輸入訂單資料
+                </div>
+            </div>
+            <div class="col-12 col-sm">
+                <div class="alert alert-secondary alert-rounded" role="alert">
+                    2.金流付款
+                </div>
+            </div>
+            <div class="col-12 col-sm">
+                <div class="alert alert-secondary alert-rounded" role="alert">
+                    3.交易完成
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 折疊式購物車細節 -->
+    <div class="container mb-5">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            顯示購物車細節
+                        </button>
+                    </div>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th width="30"></th>
+                                <th width="100"></th>
+                                <th>商品名稱</th>
+                                <th width="100">數量</th>
+                                <th width="80">小計</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="align-middle text-center">
+                                    <a href="#removeModal" class="align-middle" data-toggle="modal" data-title="刪除 金牌西裝 1 件" data-backdrop="static" data-keyboard="false">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                                <td class="align-middle">
+                                    <img src="https://images.unsplash.com/photo-1494281258937-45f28753affd?w=1350" class="img-fluid" alt="">
+                                </td>
+                                <td class="align-middle">金牌西裝</td>
+                                <td class="align-middle">1 件</td>
+                                <td class="align-middle text-center">$520</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="text-right">運費</td>
+                                <td class="align-middle">
+                                    <strong>$60</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="text-right">合計</td>
+                                <td class="align-middle">
+                                    <strong>$580</strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 下方表單開始 -->
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="請輸入Email" required>
+                            <div class="invalid-feedback">
+                                 請輸入Email
+                            </div>
+                        </div>
+                        <div class="form-group col-md">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="請輸入Password" required>
+                            <div class="invalid-feedback">
+                                 請輸入Password
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="請輸入地址" required>
+                        <div class="invalid-feedback">
+                             請輸入地址
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCountry">國家</label>
+                            <select id="inputCountry" class="form-control" required>
+                                <option value="">選擇國家</option>
+                                <option value="Taiwan">台灣</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                請選擇國家
+                            </div>
+                        </div>
+                        <div class="form-group col-md">
+                            <label for="inputState">城市</label>
+                            <select name="" id="inputState" class="form-control" required>
+                                <option value="">選擇城市</option>
+                                <option value="台北市">台北市</option>
+                                <option value="台南市">台南市</option>
+                                <option value="高雄市">高雄市</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                請選擇城市
+                            </div>
+                        </div>
+                        <div class="form-group col-md">
+                            <label for="inputZip">郵遞區號</label>
+                            <input type="text" class="form-control" id="inputZip" placeholder="請輸入郵遞區號" required>
+                            <div class="invalid-feedback">
+                                 請輸入郵遞區號
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input ml-0" type="checkbox" id="gridCheck" required>
+                            <label class="form-check-label" for="gridCheck">同意</label>
+                            <div class="invalid-feedback">你必須同意才能送出表單</div>
+                        </div>
+                    </div>
+                    <button type="submit" id="send123" class="btn btn-primary">確認送出</button>
+                </form>
+                <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (function () {
+                        'use strict';
+                        window.addEventListener('load', function () {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
+                <!-- col-md-8的結束 -->
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <!-- 標單 -->
+    <footer class="bg-light text-muted py-5">
+        <div class="container">
+            <ul class="list-inline text-center">
+                <li class="list-inline-item">© Copright 2017 六角血拼賣賣</li>
+                <li class="list-inline-item">
+                    <a class="text-info" href="#">
+                        <i class="fa fa-instagram" aria-hidden="true"></i> Instagrame</a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="text-info" href="#">
+                        <i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="text-info" href="#">About</a>
+                </li>
+            </ul>
+            <p class="text-center mb-0">Made with Bootstrap4</p>
+        </div>
+    </footer>
+
+    <!-- removeModal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">刪除商品</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>是否確認刪除商品</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">否</button>
+                    <button type="button" class="btn btn-danger text-white">是</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#removeModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget) // 選則當初觸發事件的按鈕
+                var title = button.data('title') // 使用 data-* 來取得特定內容
+
+                var modal = $(this)
+                modal.find('.modal-title').text('確認' + title) // 寫入資料
+            });
+
+            // $('#send123').on('click', function(e){
+            //     e.preventDefault();
+            // })
+        });
+    </script>
+</body>
+
+</html>
